@@ -17,3 +17,7 @@ Route::get('/', function () {
 Route::get('style-guide', function() {
     return view('style-guide');
 });
+
+Auth::routes();
+
+Route::get('/dashboard', 'HomeController@index')->name('dashboard');

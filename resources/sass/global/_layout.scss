@@ -1,7 +1,12 @@
 .container {
     margin: auto;
     max-width: 1240px;
-    padding: 0 20px;
+    padding: 0 40px;
+}
+
+main,
+.main {
+    margin-top: $nav-height;
 }
 
 section,
@@ -10,5 +15,11 @@ section,
 
     &.alternate {
         background: palette('background', 'alternate');
+    }
+}
+
+@include for-tablet-down {
+    .container {
+        padding: 0 20px;
     }
 }
