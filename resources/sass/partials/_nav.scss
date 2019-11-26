@@ -1,0 +1,47 @@
+.nav {
+    left: 0;
+    padding: 0 20px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: $z-nav;
+
+    .logo {
+        font-size: 32px;
+        line-height: $nav-height;
+    }
+
+    .logo-container {
+        float: left;
+    }
+
+    .menu-toggle {
+        cursor: pointer;
+        display: none;
+        float: right;
+    }
+
+    .nav-link {
+        line-height: $nav-height;
+        margin-left: 40px;
+    }
+
+    .nav-links {
+        float: right;
+    }
+
+    @include for-tablet-down {
+        .menu-toggle {
+            display: inline-flex;
+            height: $nav-height;
+
+            > * {
+                margin: auto;
+            }
+        }
+
+        .nav-links {
+            display: none;
+        }
+    }
+}

@@ -2,24 +2,8 @@
 
 @section('main')
 <div class="flex-center relative full-height">
-    @if (Route::has('login'))
-        <div class="top-right links">
-            @auth
-                <a href="{{ url('/home') }}">Home</a>
-            @else
-                <a href="{{ route('login') }}">Login</a>
-
-                @if (Route::has('register'))
-                    <a href="{{ route('register') }}">Register</a>
-                @endif
-            @endauth
-        </div>
-    @endif
-
     <div class="text-center">
-        <h1 class="mb">
-            Laravel
-        </h1>
+        <h1 class="mb">Web App Template</h1>
 
         <div class="links">
             <a href="https://laravel.com/docs">Docs</a>

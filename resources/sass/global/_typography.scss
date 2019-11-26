@@ -1,5 +1,9 @@
+$font-family-heading: 'Montserrat', sans-serif;
+$font-family-text: 'Montserrat Alternates', sans-serif;
+
 html {
     color: palette('foreground');
+    font-family: $font-family-heading;
     font-size: 16px;
 
     &.dark-mode {
@@ -16,6 +20,12 @@ a {
         color: palette('accent', 'dark', .6);
         text-decoration: underline;
     }
+}
+
+h1,
+h2,
+h3 {
+    font-family: $font-family-text;
 }
 
 h1 {

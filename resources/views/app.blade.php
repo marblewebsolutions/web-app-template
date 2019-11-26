@@ -7,13 +7,11 @@
         <title>Web App Template</title>
 
         <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
         <!-- Styles -->
         <style>
             html, body {
-                font-family: 'Nunito', sans-serif;
                 font-weight: 200;
                 height: 100vh;
                 margin: 0;
@@ -29,12 +27,6 @@
                 justify-content: center;
             }
 
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
-            }
-
             .links > a {
                 padding: 0 25px;
                 font-size: 13px;
@@ -45,7 +37,9 @@
         </style>
     </head>
     <body>
-        <main>
+        @include('partials.nav')
+
+        <main class="main">
             @yield('main')
         </main>
     </body>
