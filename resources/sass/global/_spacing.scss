@@ -1,0 +1,52 @@
+$spacing: (
+    '-xs': 5px,
+    '-sm': 10px,
+    '-md': 20px,
+    '': 40px,
+    '-lg': 80px,
+    '-xl': 160px,
+);
+
+@each $key, $value in $spacing {
+    // Margin
+    .ma#{$key} {
+        margin: map-get($spacing, $key);
+    }
+
+    .mt#{$key} {
+        margin-top: map-get($spacing, $key);
+    }
+
+    .mr#{$key} {
+        margin-right: map-get($spacing, $key);
+    }
+
+    .mb#{$key} {
+        margin-bottom: map-get($spacing, $key);
+    }
+
+    .ml#{$key} {
+        margin-left: map-get($spacing, $key);
+    }
+
+    // Padding
+    .pa#{$key} {
+        padding: map-get($spacing, $key);
+    }
+
+    .pt#{$key} {
+        padding-top: map-get($spacing, $key);
+    }
+
+    .pr#{$key} {
+        padding-right: map-get($spacing, $key);
+    }
+
+    .pb#{$key} {
+        padding-bottom: map-get($spacing, $key);
+    }
+
+    .pl#{$key} {
+        padding-left: map-get($spacing, $key);
+    }
+}

@@ -1,0 +1,72 @@
+// Brand Colors
+$color-primary: navy;
+$color-secondary: orange;
+$color-accent: green;
+
+@function palette($name: 'primary', $key: 'base', $alpha: 1) {
+    $palette-colors: (
+        'primary': (
+            'base': $color-primary,
+            'light': mix(white, $color-primary, 10%),
+            'dark': mix(black, $color-primary, 10%),
+        ),
+        'secondary': (
+            'base': $color-secondary,
+            'light': mix(white, $color-secondary, 10%),
+            'dark': mix(black, $color-secondary, 10%),
+        ),
+        'accent': (
+            'base': $color-accent,
+            'light': mix(white, $color-accent, 10%),
+            'dark': mix(black, $color-accent, 10%),
+        ),
+        'background': (
+            'base': #fff,
+            'alternate': #e0e0e0,
+            'inverse': #1a4668,
+            'inverse-alternate': #143854,
+        ),
+        'foreground': (
+            'base': #383838,
+            'alternate': #222,
+            'inverse': #efefef,
+            'inverse-alternate': #cdcdcd,
+        ),
+    );
+
+    @return rgba(map-get(map-get($palette-colors, $name), $key), $alpha);
+}
+
+@function palette-dark-mode($name: 'primary', $key: 'base', $alpha: 1) {
+    $palette-colors: (
+        'primary': (
+            'base': $color-primary,
+            'light': mix(white, $color-primary, 10%),
+            'dark': mix(black, $color-primary, 10%),
+        ),
+        'secondary': (
+            'base': $color-secondary,
+            'light': mix(white, $color-secondary, 10%),
+            'dark': mix(black, $color-secondary, 10%),
+        ),
+        'accent': (
+            'base': $color-accent,
+            'light': mix(white, $color-accent, 10%),
+            'dark': mix(black, $color-accent, 10%),
+        ),
+        'background': (
+            'base': #383838,
+            'alternate': #222,
+            'inverse': #efefef,
+            'inverse-alternate': #cdcdcd,
+        ),
+        'foreground': (
+            'base': #fff,
+            'alternate': #e0e0e0,
+            'inverse': #1a4668,
+            'inverse-alternate': #143854,
+        ),
+    );
+
+    @return rgba(map-get(map-get($palette-colors, $name), $key), $alpha);
+}

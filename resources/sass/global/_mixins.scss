@@ -1,0 +1,8 @@
+@mixin transition($props: ('all')) {
+    $transitions: ();
+    @each $prop in $props {
+        $transitions: join($transitions, #{#{$prop} .25s ease-in-out}, 'comma');
+    }
+
+    transition: $transitions;
+}

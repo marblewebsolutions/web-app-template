@@ -1,0 +1,14 @@
+.container {
+    margin: auto;
+    max-width: 1240px;
+    padding: 0 20px;
+}
+
+section,
+.section {
+    padding: 80px 0;
+
+    &.alternate {
+        background: palette('background', 'alternate');
+    }
+}

@@ -1,0 +1,17 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    background: palette('background');
+
+    &.dark-mode {
+        background: palette-dark-mode('background');
+    }
+}
+
+.relative {
+    position: relative;
+}

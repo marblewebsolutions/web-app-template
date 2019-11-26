@@ -1,0 +1,48 @@
+html {
+    color: palette('foreground');
+    font-size: 16px;
+
+    &.dark-mode {
+        color: palette-dark-mode('foreground');
+    }
+}
+
+a {
+    color: palette('accent', 'dark');
+    text-decoration: none;
+    @include transition(('color'));
+
+    &:hover {
+        color: palette('accent', 'dark', .6);
+        text-decoration: underline;
+    }
+}
+
+h1 {
+    font-size: 5em;
+}
+
+h2 {
+    font-size: 2.5em;
+}
+
+h3 {
+    font-size: 1.5em;
+}
+
+li,
+p {
+    font-size: 1em;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}

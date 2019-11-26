@@ -1,0 +1,19 @@
+// Rows and Columns
+// 12 columns to a row
+/*
+Example of 2 Columns:
+<div class="row">
+    <div class="col-6"></div>
+    <div class="col-6"></div>
+</div>
+*/
+.row {
+    display: flex;
+    flex-flow: row wrap;
+
+    @for $i from 1 through 12 {
+        .col-#{$i} {
+            width: calc(100% * #{$i} / 12);
+        }
+    }
+}

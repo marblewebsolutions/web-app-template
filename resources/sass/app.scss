@@ -1,4 +1,17 @@
-//
-body {
-    background: brown;
-}
+// Vars
+@import 'global/colors';
+@import 'global/spacing';
+@import 'global/vars';
+
+// Mixins
+@import 'global/mixins';
+@import 'global/media-query-mixins';
+
+// Global CSS
+@import 'global/global';
+@import 'global/columns';
+@import 'global/grid';
+@import 'global/layout';
+@import 'global/typography';
+
+// Partials CSS

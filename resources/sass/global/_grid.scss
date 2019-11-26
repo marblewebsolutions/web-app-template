@@ -1,0 +1,48 @@
+// Grid display
+// Default is grid of 4 items
+.grid {
+    display: flex;
+    flex-flow: row wrap;
+    margin: -$grid-spacing -$grid-spacing 0;
+
+    .grid-item {
+        padding: $grid-spacing;
+        width: 25%;
+    }
+
+    @include for-tablet-down {
+        .grid-item {
+            width: 50%;
+        }
+    }
+
+    @include for-mobile-only {
+        .grid-item {
+            width: 100%;
+        }
+    }
+
+    &.three-wide {
+        .grid-item {
+            width: calc(100% / 3);
+        }
+
+        @include for-mobile-only {
+            .grid-item {
+                width: 100%;
+            }
+        }
+    }
+
+    &.two-wide {
+        .grid-item {
+            width: 50%;
+        }
+
+        @include for-mobile-only {
+            .grid-item {
+                width: 100%;
+            }
+        }
+    }
+}
